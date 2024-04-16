@@ -7,6 +7,7 @@ jobs:
         runs-on: windows-latest
         steps:
             - uses: actions/checkout@v4
+            - run: choco install pkgconfiglite
             - run: ./build-windows.cmd
     build-macos:
         runs-on: macos-latest
