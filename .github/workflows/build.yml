@@ -1,0 +1,15 @@
+name: Build
+on:
+    workflow_dispatch:
+
+jobs:
+    build-windows:
+        runs-on: windows-latest
+        steps:
+            - uses: actions/checkout@v4
+            - run: ./build-windows.cmd
+    build-macos:
+        runs-on: macos-latest
+        steps:
+            - uses: actions/checkout@v4
+            - run: ./build-macos.sh
