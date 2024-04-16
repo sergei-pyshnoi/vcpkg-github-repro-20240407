@@ -1,3 +1,9 @@
+pushd $VCPKG_INSTALLATION_ROOT
+git checkout master
+git restore .
+git pull
+popd
+
 brew install autoconf automake pkg-config
 
 cmake \
